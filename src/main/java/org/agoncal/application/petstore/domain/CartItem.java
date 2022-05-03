@@ -2,15 +2,18 @@ package org.agoncal.application.petstore.domain;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
+
 
 /**
  * @author Antonio Goncalves
  *         http://www.antoniogoncalves.org
  *         --
  */
-
+@AllArgsConstructor
 public class CartItem {
 
     // ======================================
@@ -24,15 +27,6 @@ public class CartItem {
     @NotNull
     @Min(1)
     private Integer quantity;
-
-    // ======================================
-    // =            Constructors            =
-    // ======================================
-
-    public CartItem(Item item, Integer quantity) {
-        this.item = item;
-        this.quantity = quantity;
-    }
 
     // ======================================
     // =              Public Methods        =

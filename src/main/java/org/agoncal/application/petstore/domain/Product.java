@@ -70,7 +70,7 @@ public class Product {
         this.category = category;
     }
 
-    
+
     // ======================================
     // =   Methods hash, equals, toString   =
     // ======================================
