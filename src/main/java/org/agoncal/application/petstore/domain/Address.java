@@ -6,6 +6,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 /**
  * @author Antonio Goncalves
@@ -14,6 +15,7 @@ import lombok.Setter;
  */
 
 @Embeddable
+@ToString
 public class Address {
 
     // ======================================
@@ -88,17 +90,4 @@ public class Address {
         return result;
     }
 
-    @Override
-    public String toString() {
-        final StringBuilder sb = new StringBuilder();
-        sb.append("Address");
-        sb.append("{street1='").append(street1).append('\'');
-        sb.append(", street2='").append(street2).append('\'');
-        sb.append(", city='").append(city).append('\'');
-        sb.append(", state='").append(state).append('\'');
-        sb.append(", zipcode='").append(zipcode).append('\'');
-        sb.append(", country='").append(country).append('\'');
-        sb.append('}');
-        return sb.toString();
-    }
 }
