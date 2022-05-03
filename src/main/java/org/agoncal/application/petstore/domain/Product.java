@@ -7,6 +7,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 import java.util.ArrayList;
 import java.util.List;
+
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -24,6 +26,7 @@ import lombok.Setter;
         @NamedQuery(name = Product.FIND_ALL, query = "SELECT p FROM Product p")
 })
 @XmlRootElement
+@AllArgsConstructor
 public class Product {
 
     // ======================================
@@ -63,13 +66,6 @@ public class Product {
 
     public Product() {
     }
-
-    public Product(String name, String description, Category category) {
-        this.name = name;
-        this.description = description;
-        this.category = category;
-    }
-
 
     // ======================================
     // =   Methods hash, equals, toString   =
