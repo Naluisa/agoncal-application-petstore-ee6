@@ -1,6 +1,8 @@
 package org.agoncal.application.petstore.domain;
 
 import javax.persistence.*;
+
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -11,6 +13,7 @@ import lombok.Setter;
  */
 
 @Entity
+@AllArgsConstructor
 public class OrderLine {
 
     // ======================================
@@ -33,11 +36,6 @@ public class OrderLine {
     // ======================================
 
     public OrderLine() {
-    }
-
-    public OrderLine(Integer quantity, Item item) {
-        this.quantity = quantity;
-        this.item = item;
     }
 
     // ======================================
