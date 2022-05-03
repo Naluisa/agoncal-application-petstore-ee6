@@ -6,6 +6,8 @@ import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,6 +18,7 @@ import lombok.Setter;
  */
 
 @Embeddable
+@AllArgsConstructor
 public class CreditCard {
 
     // ======================================
@@ -42,12 +45,6 @@ public class CreditCard {
     // ======================================
 
     public CreditCard() {
-    }
-
-    public CreditCard(String creditCardNumber, CreditCardType creditCardType, String creditCardExpDate) {
-        this.creditCardNumber = creditCardNumber;
-        this.creditCardType = creditCardType;
-        this.creditCardExpDate = creditCardExpDate;
     }
 
     // ======================================
