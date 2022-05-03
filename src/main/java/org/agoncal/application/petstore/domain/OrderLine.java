@@ -5,6 +5,7 @@ import javax.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 /**
  * @author Antonio Goncalves
@@ -14,6 +15,7 @@ import lombok.Setter;
 
 @Entity
 @AllArgsConstructor
+@ToString
 public class OrderLine {
 
     // ======================================
@@ -72,14 +74,4 @@ public class OrderLine {
         return result;
     }
 
-    @Override
-    public String toString() {
-        final StringBuilder sb = new StringBuilder();
-        sb.append("OrderLine");
-        sb.append("{id=").append(id);
-        sb.append(", quantity=").append(quantity);
-        sb.append(", item=").append(item);
-        sb.append('}');
-        return sb.toString();
-    }
 }
