@@ -2,6 +2,8 @@ package org.agoncal.application.petstore.domain;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * @author Antonio Goncalves
@@ -15,6 +17,8 @@ public class CartItem {
     // =             Attributes             =
     // ======================================
 
+    @Setter
+    @Getter
     @NotNull
     private Item item;
     @NotNull
@@ -38,25 +42,6 @@ public class CartItem {
         return item.getUnitCost() * quantity;
     }
 
-    // ======================================
-    // =         Getters & setters          =
-    // ======================================
-
-    public Item getItem() {
-        return item;
-    }
-
-    public void setItem(Item item) {
-        this.item = item;
-    }
-
-    public Integer getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(Integer quantity) {
-        this.quantity = quantity;
-    }
 
     // ======================================
     // =   Methods hash, equals, toString   =
